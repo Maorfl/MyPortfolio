@@ -61,3 +61,16 @@ for (let project of projects) {
         </div>
         `;
 }
+
+let handleSubmit = () => {
+    let name = (document.getElementById("floatingName") as HTMLInputElement).value;
+    let email = (document.getElementById("floatingEmail") as HTMLInputElement).value;
+    if (!name.length) {
+        alert("Name is required!");
+    } else if (!email.length) {
+        alert("Email is required!");
+    } else {
+        alert("Thank you for contacting me!");
+        (document.getElementById("contactForm") as HTMLFormElement).reset();
+    }
+}
